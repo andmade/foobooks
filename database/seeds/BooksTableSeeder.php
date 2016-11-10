@@ -40,5 +40,15 @@ class BooksTableSeeder extends Seeder
             'cover'         => 'http://img1.imagesbn.com/p/9780345514400_p0_v1_s114x166.JPG',
             'purchase_link' => 'http://www.barnesandnoble.com/w/i-know-why-the-caged-bird-sings-maya-angelou/1100392955?ean=9780345514400',
         ]);
+
+        DB::table('books')->insert([
+            'created_at'    => Carbon\Carbon::now()->toDateTimeString(),
+            'updated_at'    => Carbon\Carbon::now()->toDateTimeString(),
+            'title'         => "Harry Potter and the Sorcerer's Stone",
+            'author'        => 'J.K. Rowling',
+            'published'     => 1997,
+            'cover'         => 'http://prodimage.images-bn.com/pimages/9780590353427_p0_v1_s484x700.jpg',
+            'purchase_link' => 'http://www.barnesandnoble.com/w/harry-potter-and-the-sorcerers-stone-j-k-rowling/1100036321?ean=9780590353427',
+        ]);
     }
 }
